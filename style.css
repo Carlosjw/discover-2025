@@ -35,11 +35,13 @@ body {
 
   /* background: color image repeat position/cover*/
   background: #201B2D var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
   font-family: 'Inter', sans-serif;
   color: var(--text-color);
+
 }
 
 #container {
@@ -65,7 +67,7 @@ body * {
 }
 
 /* Switch */
-#switch{
+#switch {
   position: relative;
   width: 64px;
   margin: 4px auto;
@@ -79,19 +81,20 @@ body * {
   border-radius: 50%;
   background: #fff var(--switch-bg-url) no-repeat center;
   /* Mudando pisicionamento alsolute */
-  position: absolute; /* relativado pelo position do pai "switch"*/
+  position: absolute;
+  /* relativado pelo position do pai "switch"*/
   top: 50%;
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
 }
 
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial;
 }
 
-#switch span{
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -158,4 +161,14 @@ footer {
   text-align: center;
   font-size: 14px;
   font-weight: 300;
+}
+
+@media(min-width:700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg)
+  }
 }
